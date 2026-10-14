@@ -3,6 +3,15 @@ import re
 import json
 from datetime import datetime, timezone
 
+def extract_meta(html, key):
+    p1 = rf'<meta[^>]+(?:property|name)=["\']{re.escape(key)}["\'][^>]+content=["\']([^"\']+)["\']'
+    p2 = rf'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\']{re.escape(key)}["\']'
+    for p in [p1, p2]:
+        m = re.search(p, html, re.IGNORECASE)
+        if m:
+            return m.group(1).replace('&amp;', '&')
+    return ""
+
 def fetch_instagram(username):
     url = f"https://www.instagram.com/{username}/"
     headers = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
@@ -12,17 +21,16 @@ def fetch_instagram(username):
             content = resp.read().decode('utf-8', errors='ignore')
         
         followers = 0
-        desc_match = re.search(r'<meta[^>]*property="og:description"[^>]*content="([^"]*)"', content, re.IGNORECASE)
-        if desc_match:
-            f_match = re.search(r'([\d,\.kKmM]+)\s+Followers', desc_match.group(1))
-            if f_match:
-                raw = f_match.group(1).replace(',', '')
-                if 'k' in raw.lower(): followers = int(float(raw.lower().replace('k', '')) * 1000)
-                elif 'm' in raw.lower(): followers = int(float(raw.lower().replace('m', '')) * 1000000)
-                else: followers = int(raw)
+        desc = extract_meta(content, "og:description") or extract_meta(content, "description")
+        target_text = desc if desc else content
+        f_match = re.search(r'([\d,\.kKmM]+)\s*(?:Followers|Follower|Abonnenten)', target_text, re.IGNORECASE)
+        if f_match:
+            raw = f_match.group(1).replace(',', '')
+            if 'k' in raw.lower(): followers = int(float(raw.lower().replace('k', '')) * 1000)
+            elif 'm' in raw.lower(): followers = int(float(raw.lower().replace('m', '')) * 1000000)
+            else: followers = int(raw)
 
-        img_match = re.search(r'<meta[^>]*property="og:image"[^>]*content="([^"]*)"', content, re.IGNORECASE)
-        avatar = img_match.group(1).replace('&amp;', '&') if img_match else ""
+        avatar = extract_meta(content, "og:image")
 
         return {"status": "ok", "username": username, "followers": followers, "avatar": avatar, "url": f"https://www.instagram.com/{username}/"}
     except Exception as e:
@@ -71,7 +79,8 @@ def main():
     data = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
         "instagram": fetch_instagram("janaue7"),
-        "tiktok": fetch_tiktok("chiarajana"),
+        "tiktok_chiarajana": fetch_tiktok("chiarajana"),
+        "tiktok_janaa_ue": fetch_tiktok("janaa_ue"),
         "pinterest": fetch_pinterest("janaue7")
     }
     with open("stats.json", "w", encoding="utf-8") as f:
