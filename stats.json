@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T22:32:32.315777+00:00",
+  "updatedAt": "2026-10-14T22:56:43.240362+00:00",
   "instagram": {
     "status": "ok",
     "username": "janaue7",
@@ -7,13 +7,21 @@
     "avatar": "",
     "url": "https://www.instagram.com/janaue7/"
   },
-  "tiktok": {
+  "tiktok_chiarajana": {
     "status": "ok",
     "username": "chiarajana",
     "followers": 146,
     "likes": 40900,
-    "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/e824236f8196b954cdd85e7dd177ad31~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=e3175b27&x-expires=1792188000&x-signature=XgCUfpQFoYjoTveTzyU7xEzAcao%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+    "avatar": "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/e824236f8196b954cdd85e7dd177ad31~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=ea4da95c&x-expires=1792188000&x-signature=wkVySjiX75O0bWLQr09KtJtzYSs%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
     "url": "https://www.tiktok.com/@chiarajana"
+  },
+  "tiktok_janaa_ue": {
+    "status": "ok",
+    "username": "janaa_ue",
+    "followers": 429,
+    "likes": 38500,
+    "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/3ffcccc35b5dc77fedbd03e66b8c57b0~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=91779fa8&x-expires=1792188000&x-signature=5IYZAfCA%2BL4%2BKkUrdvKXJOW0PxU%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+    "url": "https://www.tiktok.com/@janaa_ue"
   },
   "pinterest": {
     "status": "ok",
