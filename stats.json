@@ -1,8 +1,7 @@
 {
-  "updatedAt": "2026-11-09T14:46:52.920678+00:00",
+  "updatedAt": "2026-11-10T01:00:16.358202+00:00",
   "instagram": {
-    "status": "ok",
-    "username": "janaue7",
+    "status": "error",
     "followers": 0,
     "avatar": "",
     "url": "https://www.instagram.com/janaue7/"
@@ -11,8 +10,8 @@
     "status": "ok",
     "username": "chiarajana",
     "followers": 149,
-    "likes": 43300,
-    "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/e824236f8196b954cdd85e7dd177ad31~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=8f26a960&x-expires=1794405600&x-signature=Fe0o77XnC4AQ0DDmr0B8sxGTeYI%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+    "likes": 43400,
+    "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/e824236f8196b954cdd85e7dd177ad31~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=6524f89b&x-expires=1794445200&x-signature=KjXHakUlH1d7bwpub%2FECgq8bMok%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
     "url": "https://www.tiktok.com/@chiarajana"
   },
   "tiktok_janaa_ue": {
@@ -20,13 +19,13 @@
     "username": "janaa_ue",
     "followers": 427,
     "likes": 38500,
-    "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/3ffcccc35b5dc77fedbd03e66b8c57b0~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=3dafe22f&x-expires=1794405600&x-signature=oAwhIkDKrQyvN1DwtwqFU78i2ZE%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+    "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/3ffcccc35b5dc77fedbd03e66b8c57b0~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=26ebb9a2&x-expires=1794445200&x-signature=0sKrOJ49c75rq0mdvNeBnZbbsag%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
     "url": "https://www.tiktok.com/@janaa_ue"
   },
   "pinterest": {
     "status": "ok",
     "username": "janaue7",
-    "followers": 13,
+    "followers": 10,
     "avatar": "https://i.pinimg.com/280x280_RS/ba/cb/12/bacb123bb2c5f1b58884b68ebf20a9ab.jpg",
     "url": "https://www.pinterest.com/janaue7/"
   }
